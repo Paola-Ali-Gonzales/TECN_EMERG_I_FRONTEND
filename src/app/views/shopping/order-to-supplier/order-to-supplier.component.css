@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.cont-all{
+    margin-top: 60px;
+}
+
+.cont-header{
+    background-color: #DFE9F2;
+    display: flex;
+}
+
+.header-1{
+    background-color: #a4d6ef;
+    margin: 0;
+    padding: 14px 20px 10px 20px;
+    height: 50px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.header-2{
+    background-color: #DFE9F2;
+    margin: 0;
+    padding: 14px 20px 10px 20px;
+    letter-spacing: 1px;
+}
+
+.content{
+    margin-top: 20px;
+}
+
+.text-c{
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.text-inline{
+    display: flex;
+}
+.border{
+    justify-content:space-between;
+}
+.p-m{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 500;
+}
+.p-c{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 200;
+}
+.line {
+    border-top: 1px solid #D9DBE9;
+    height: 2px;
+    max-width: 700px;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: -8px;
+}
+
+.cont{
+    background-color: #DFE9F2;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.tx{
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+input{
+    border: none;
+    font-size: 10px;
+    margin-left: 4px;   
+}
+
+.btn-c{
+   background-color: #4c8eb7; 
+   color: white;
+   margin-left: 10px;
+   font-size: 12px;
+}
+.cont-none{
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.btn-documents{
+    background-color: #4c8eb7; 
+    color: white;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+}
+.btn-modals{
+    width:50%;
+    background-color: #0A457F;
+    color: #fff;
+}
+.r-p{
+    font-size: 20px;
+}

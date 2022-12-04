@@ -1,0 +1,78 @@
+<div class="container cont-all">
+    <div class="header-cont">
+        <h1>Productos manufacturados</h1>
+        <div class="line"></div>
+    </div>
+    <div>
+        <a class="link-list">VOLVER A LISTADO</a>
+        <h2 class="info-h">INFORMACION DE PRODUCCION EN MANUFACTURA</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="text-input" for="Nombre">Cantidad: </label>
+                    <p>example</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="text-input" for="Nombre">Fecha de producción: </label>
+                    <p>example</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="text-input" for="Nombre">Información del producto: </label>
+                    <p>example</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <table class="table align-middle mb-0 bg-white table-hover">
+                  <thead class="bg-light table-light">
+                    <tr class="text-th">
+                      <th>Producto</th>
+                      <th class="td-tx">Codigo</th>
+                      <th class="td-tx">Precio Unitario</th>
+                      <th class="td-tx">IVA</th>
+                      <th class="td-tx">Almacen</th>
+                      <th class="td-tx">Categoria</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngFor="let card of products">
+                    <tr>
+                      <td>
+                        <p class="fw-normal mb-1">{{card.title}}</p>
+                      </td>
+                      <td class="td-tx">
+                        <p>{{card.code}}</p>
+                      </td>
+                      <td class="td-tx">
+                        <p>{{card.unit_price}}</p>
+                      </td>
+                      <td class="td-tx">
+                        <p>{{card.iva}}</p>
+                      </td>
+                      <td class="td-tx">
+                        <p>{{card.warehouse}}</p>
+                      </td>
+                      <td class="td-tx">
+                        <p>{{card.category}}</p>
+                      </td>
+                      
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="content-btn">
+                  <button class="btn btn-add">Editar manufactura</button>
+                  
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@700&display=swap');
+* {
+    box-sizing: border-box;
+    list-style: none;
+	outline: none;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none;
+}
+body{
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0;  }
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+ 
+@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+

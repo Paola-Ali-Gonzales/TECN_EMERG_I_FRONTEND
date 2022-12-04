@@ -1,0 +1,130 @@
+<div class="" style="position: relative;">
+  <div class="container-all">
+    <div class="">
+      <app-side-menu-shopping></app-side-menu-shopping>
+    </div>
+    <div class="list-suppl">
+      <div class="container" style="position: relative;">
+        <mat-toolbar class="toolbar">
+            <span>LISTA DE PRESUPUESTO DE PROVEEDORES</span>  
+        </mat-toolbar>
+        <div class="agregar">
+          <button mat-raised-button class="btn" >
+            <svg class="pointer" matTooltip="Nuevo Presupuesto" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+          </button>
+          <mat-grid-list cols="8">
+            <mat-grid-tile [colspan]="6" [rowspan]="1">
+              <mat-form-field appearance="standard">
+                <mat-label>Buscar Presupuesto</mat-label>
+                <input matInput  placeholder="buscar" #input autocomplete="off">
+              </mat-form-field>        
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <button mat-raised-button class="btn">
+                <svg class="pointer" matTooltip="buscar" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <circle cx="10" cy="10" r="7" />
+                  <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
+              </button>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <button mat-raised-button class="btn">
+                <svg class="pointer" matTooltip="Filtrar presupuesto" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments-alt" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <rect x="4" y="8" width="4" height="4" />
+                  <line x1="6" y1="4" x2="6" y2="8" />
+                  <line x1="6" y1="12" x2="6" y2="20" />
+                  <rect x="10" y="14" width="4" height="4" />
+                  <line x1="12" y1="4" x2="12" y2="14" />
+                  <line x1="12" y1="18" x2="12" y2="20" />
+                  <rect x="16" y="5" width="4" height="4" />
+                  <line x1="18" y1="4" x2="18" y2="5" />
+                  <line x1="18" y1="9" x2="18" y2="20" />
+                </svg>
+              </button>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="body">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">   
+                <!-- Referencia Column -->
+                <ng-container matColumnDef="referencia">
+                    <th mat-header-cell *matHeaderCellDef> Referencia </th>
+                    <td mat-cell *matCellDef="let element"> {{element.referencia}} </td>
+                </ng-container>
+                <!-- Proveedor Column -->
+                <ng-container matColumnDef="proveedor">
+                  <th mat-header-cell *matHeaderCellDef> proveedor </th>
+                  <td mat-cell *matCellDef="let element"> {{element.proveedor}} </td>
+                </ng-container>
+                <!-- Ubicacion Column -->
+                <ng-container matColumnDef="ubicacion">
+                  <th mat-header-cell *matHeaderCellDef>Ubicacion</th>
+                  <td mat-cell *matCellDef="let element"> {{element.ubicacion}} </td>
+                </ng-container>
+                <!-- Numero de contacto Column -->
+                <ng-container matColumnDef="numContacto">
+                  <th mat-header-cell *matHeaderCellDef>Numero de contacto</th>
+                  <td mat-cell *matCellDef="let element"> {{element.numContacto}} </td>
+                </ng-container>   
+                <!-- fecha Column -->
+                <ng-container matColumnDef="fecha">
+                  <th mat-header-cell *matHeaderCellDef>fecha de Entrega</th>
+                  <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+                </ng-container>   
+                <!-- fechaFin Column -->
+                <ng-container matColumnDef="fechaFin">
+                    <th mat-header-cell *matHeaderCellDef>fecha Fin</th>
+                    <td mat-cell *matCellDef="let element"> {{element.fechaFin}} </td>
+                </ng-container>            
+                <!-- baseImponible Column -->
+                <ng-container matColumnDef="baseImponible">
+                  <th mat-header-cell *matHeaderCellDef>base Imponible</th>
+                  <td mat-cell *matCellDef="let element"> {{element.baseImponible}} </td>
+                </ng-container>            
+                <!-- Creador Column -->
+                <ng-container matColumnDef="creador">
+                  <th mat-header-cell *matHeaderCellDef>Creador</th>
+                  <td mat-cell *matCellDef="let element"> {{element.creador}} </td>
+                </ng-container>
+                <!-- estado Column -->
+                <ng-container matColumnDef="estado">
+                  <th mat-header-cell *matHeaderCellDef>Estado</th>
+                  <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+                </ng-container>                    
+                <!-- Acciones Column -->
+                <ng-container matColumnDef="acciones">
+                  <th mat-header-cell *matHeaderCellDef>  </th>
+                  <td mat-cell *matCellDef="let element; let i = index" style="text-align: right;"> 
+                      <a class="pointer"  matTooltip="Editar">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00AEE1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                              <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                              <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                          </svg>
+                      </a>
+                      <a class="pointer" (click)="seebudget(i)" matTooltip="Ver Presupuesto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                          <circle cx="12" cy="12" r="2" />
+                          <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                        </svg>
+                      </a>
+                </td>
+                </ng-container>  
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>    
+      </div>
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+

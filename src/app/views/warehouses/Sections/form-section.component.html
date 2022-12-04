@@ -1,0 +1,34 @@
+<div class="content-all">
+    <br><br>
+    <div class="card bg-light mb-3 centreado" style="border-color:#00AEE1;">
+        <div class="form_1 data_info card-header" style="border-color:#00AEE1;background-color:#0a457fb6;" >
+            <div class="line"></div>
+            <div class="header-rg">
+                <h1><b>{{titulo}}</b></h1>
+            </div>
+        </div>
+        <div class="card-body ">
+            <form>
+                <div class="form-group col-md-8">
+                    <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Nombre:</label>
+                    <input type="text" class="form-control" placeholder="Nombre y descripcion" name="description"
+                        id="description" [(ngModel)]="section.description">
+                    <div class="alert alert-danger" *ngIf="error?.description">
+                        {{ error.description }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-secondary my-2 btn-style"
+                        routerLink="/seccion"
+                        (click)="section.idSection? editar(): crear() ">
+                        {{ section.idSection? 'Editar': 'Crear' }}
+                        
+                    </button>
+                    <button type="button" class="btn btn-secondary my-2 btn-style"
+                        routerLink="/seccion">volver</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

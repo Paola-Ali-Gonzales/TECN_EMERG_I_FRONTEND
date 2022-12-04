@@ -1,0 +1,57 @@
+table {
+    align-items: center;
+    width: 100%;
+}
+th{
+    width: 8%;
+}
+td{
+    font-size: 12px;
+}
+span{
+    color: white;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+.toolbar{
+    margin-top: 2%;
+    background-color: #68cae9;
+    border-radius: 5PX;
+}
+.container{
+    margin-top: 60px;
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+    border-radius:20px;
+}
+
+.agregar{
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.btn{
+    background-color: #68cae9;
+}
+.pointer{
+    cursor: pointer;
+}
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.container-all{
+    display: flex;
+    margin-top: 40px;
+}
+.list-suppl{
+    width: 100%;
+    margin: 0px 20px 0px 20px;
+}

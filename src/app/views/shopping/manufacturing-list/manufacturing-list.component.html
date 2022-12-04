@@ -1,0 +1,96 @@
+<div class="" style="position: relative;">
+  <div class="container-all">
+    <div class="">
+      <app-side-menu-shopping></app-side-menu-shopping>
+    </div>
+    <div class="list" style="position: relative;">
+    <div class="container">
+    <mat-card style="margin-top: 20px;">
+        <form>
+            <mat-grid-list cols="8" rowHeight="70px">             
+                <mat-grid-tile [colspan]="8" [rowspan]="1">
+                   <p>Productos  manufacturados</p>
+                </mat-grid-tile>               
+                <mat-grid-tile [colspan]="6" [rowspan]="1">
+                  <mat-form-field appearance="standard" class="search">
+                    <mat-label>Buscar Producto</mat-label>
+                    <input matInput (keyup)="applyFilter($event)" placeholder="buscar" #input autocomplete="off">
+                  </mat-form-field>                 
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                  <button class="btn"mat-raised-button>
+                    <svg class="pointer" matTooltip="buscar" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <circle cx="10" cy="10" r="7" />
+                      <line x1="21" y1="21" x2="15" y2="15" />
+                    </svg>
+                  </button>                 
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <button style="background-color:#0A457F;" class="pointer" matTooltip="Añadir nuevo producto" mat-raised-button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="9" y1="12" x2="15" y2="12" />
+                            <line x1="12" y1="9" x2="12" y2="15" />
+                        </svg>
+                    </button>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="8" [rowspan]="8" >
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z3">
+                        <!-- Fecha Column -->
+                        <ng-container matColumnDef="date">
+                            <th mat-header-cell *matHeaderCellDef> Fecha </th>
+                            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                          </ng-container>
+                        <!-- Cantidad Column -->
+                        <ng-container matColumnDef="quantity">
+                          <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+                          <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+                        </ng-container>
+                        <!-- Producto Column -->
+                        <ng-container matColumnDef="product">
+                          <th mat-header-cell *matHeaderCellDef> Producto </th>
+                          <td mat-cell *matCellDef="let element"> {{element.product}} </td>
+                        </ng-container>                    
+                        <!-- Acciones Column -->
+                        <ng-container matColumnDef="acciones">
+                            <th mat-header-cell *matHeaderCellDef>  </th>
+                            <td mat-cell *matCellDef="let element; let i = index" style="text-align: right;"> 
+                                <a class="pointer"  matTooltip="Editar">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00AEE1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                        <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                                    </svg>
+                                </a>
+                                <a class="pointer" (click)="deleteAccount(i)" matTooltip="Eliminar">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0A457F" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <line x1="4" y1="7" x2="20" y2="7" />
+                                        <line x1="10" y1="11" x2="10" y2="17" />
+                                        <line x1="14" y1="11" x2="14" y2="17" />
+                                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                    </svg>
+                                </a>
+                          </td>
+                      </ng-container>   
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table> 
+                </mat-grid-tile>      
+            </mat-grid-list>        
+        </form>     
+    </mat-card>
+  </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  

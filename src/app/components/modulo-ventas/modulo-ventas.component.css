@@ -1,0 +1,120 @@
+.principal{
+    padding: 3%;
+}
+#button-option-sale{
+    color: rgb(127, 127, 127);
+    background: none;
+    border: none;
+}
+#button-option-sale:hover{
+    color: rgb(187, 246, 243);
+}
+#button-option-list-sale{
+    background: none;
+    border-radius: 20px;
+    color: #9FCDDC;
+    border: 2px solid;
+    font-size: 12px;
+    
+    width: 100%;
+    height: auto;
+}
+
+#button-option-list-sale-delete, #button-option-list-sale-update, #btn-sale{
+    
+    background: rgb(23,138,191);
+    border-radius: 20px;
+    border: 1px solid;
+    color: white;
+    border-color: rgb(23,138,191);
+    font-size: 12px;
+    
+    height: auto;
+}
+#button-option-list-sale-delete{
+    
+    
+    position: absolute;
+    right: 3%;
+    
+}
+
+#options-buttons{
+    position: relative;
+}
+@media only screen and (max-width: 766px) {
+    #button-option-list-sale{
+        margin-bottom: 10px;
+    }
+    #button-option-list-sale-update{
+        margin-bottom: 10px;
+        width: 100%;
+        
+    }
+    #button-option-list-sale-delete{
+        margin-left: 10px;
+        width: 180px;
+    }
+    #options-buttons{
+        margin-bottom: 30px;
+    }
+  }
+#btn-sale{
+    height: 40px;
+    font-weight: bold;
+}
+#total-products{
+    
+    position: relative;
+    display: flex;
+}
+#total, #number{
+    font-weight: bold;
+}
+#number{
+    position: absolute;
+    right: 0%;
+}
+
+button.accordion {
+    background-color: #F4F8FA;
+    transition:  0.2s;
+    border: none;
+    width: 100%;
+    margin-bottom: 5px;
+}
+#table-detail{
+    border-radius: 5px;
+    width: 100%;
+    
+}
+button.accordion:hover {
+    background-color: #e9e9e9;
+}
+
+button.accordion:after {
+    content:"<";
+transform:rotate(-90deg);
+    font-size: 20px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+button.accordion.active:after {
+    content:"<";
+transform:rotate(90deg)
+}
+div.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
+div.panel{
+    border-top: 1px;
+}

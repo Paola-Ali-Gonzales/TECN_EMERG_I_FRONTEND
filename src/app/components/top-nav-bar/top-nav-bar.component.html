@@ -1,0 +1,46 @@
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="top-nav-bar.component.css">+
+
+<header>
+
+    <nav class="navigation">
+      <div class="logo"> 
+        <img src="assets/svg/logo-pymes.svg" height="40px">
+      </div>
+      
+      <div class="toggle__menu" id="toggle-menu">
+        <i class="bx bx-grid-alt"></i>
+      </div>
+      <ul class="nav__list nav_menu" id="nav-menu">
+        <div class="close__menu" id="close-menu">
+          <i class="bx bx-x"></i>
+        </div>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Menú</a>
+        </li>
+        <li class="nav__item dropdown nav_list_menu">
+          <a href="#" class="nav__link dropdown__link">Almacenes
+            <i class="bx bxs-chevron-down dropdown__icon"></i>
+          </a>
+
+          <div class="megamenu">
+            <ul class="content">
+              <li class="nav__item"><a href="/warehouse" class="nav__link">Warehouse</a></li>
+              <li class="nav__item"><a href="/seccion" class="nav__link">Section</a></li>
+              <li class="nav__item"><a href="/listar_productos" class="nav__link">Products</a></li>     
+            </ul>
+          </div>
+        </li>
+
+        
+
+        <li class="nav__item"><a href="#" class="nav__link">Empresas</a></li>
+        <div *ngIf="">
+        </div>
+        <li class="nav__item"><a routerLink="/select_register" class="nav__link register__link">Regístrate</a></li>
+        <li class="nav__item"><a href="/user_login" class="nav__link login__link">Iniciar Sesión</a></li>
+      </ul>
+    </nav>
+
+  
+</header>

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.cont-all{
+    margin-top: 60px;
+}
+
+.cont-header{
+    background-color: #DFE9F2;
+    display: flex;
+}
+
+.header-1{
+    background-color: #a4d6ef;
+    margin: 0;
+    padding: 14px 20px 10px 20px;
+    height: 50px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.header-2{
+    background-color: #DFE9F2;
+    margin: 0;
+    padding: 14px 20px 10px 20px;
+    letter-spacing: 1px;
+}
+
+.content{
+    margin-top: 20px;
+}
+
+.text-c{
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.text-inline{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.line {
+    border-top: 1px solid #D9DBE9;
+    height: 2px;
+    max-width: 700px;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: -8px;
+}
+
+.cont{
+    background-color: #DFE9F2;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.tx{
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 50%;
+}
+
+
+.input-wrapper {
+	position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.input-icon {
+	color: #A0A3BD;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+
+    left: unset;
+    right: 15px;
+}
+
+.text-input{
+    font-weight: bolder;
+    font-size: 15px;
+    margin-right: 20px;
+    color: #0A457F;
+
+}
+
+.text-th th{
+    color: #0A457F;
+    text-transform: uppercase;
+}
+
+table{
+    margin: 10px;
+}
+
+.content-btn{
+    display:flex;
+    margin-top: 30px;
+    flex-direction: row-reverse;
+}
+    
+.btn{
+    width: 200px;
+    color: #FFFFFF;
+    background: #175a9cc6;
+    box-shadow: 0px 3px 12px rgba(74, 58, 255, 0.18);
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover{
+    color: #FFFFFF;
+    background: #0A457F;
+}
+
+.link-list{
+    letter-spacing: 3px;
+    color: #4c86c1;
+    font-weight: 600;
+}
+
+.link-list:hover{
+    letter-spacing: 3px;
+    color: #0A457F;
+    font-weight: 600;
+}

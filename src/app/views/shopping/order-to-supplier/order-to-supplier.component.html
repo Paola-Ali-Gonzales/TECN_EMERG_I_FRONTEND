@@ -1,0 +1,318 @@
+<div class="container cont-all">
+    <div class="cont-header">
+        <p class="header-1">PEDIDO A PROVEEDOR</p>
+        <p class="header-2">RECEPCION DE PRODUCTOS</p>
+    </div>
+    <div class="content">
+        <p class="text-c">REF. PROVEEDOR</p>
+        <div class="text-inline">
+            <p style="margin-right: 10px" class="text-c">PROVEEDOR: </p> 
+            <p>Nombre de proveedor</p>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+            <div class="col-md-6 cont-b">
+                <div class="cont">
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">AUTOR/SOLICITANTE:</p>
+                        <p>Ejemplo</p>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">Descuentos:</p>
+                        <p>Ejemplo</p>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">CONDICIONES DE PAGO:</p>
+                        <p>Ejemplo</p>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">TIPO DE PAGO:</p>
+                        <p>Ejemplo</p>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">DIVISA:</p>
+                        <p>Ejemplo</p>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">FECHA DE ENTREGA:</p>
+                        <p>Ejemplo</p>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">TIEMPO DE ENTREGA EN DIAS:</p>
+                        <p>Ejemplo</p>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">PRODUCTOS:</p>
+                        <p>Ejemplo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 cont-b">
+                <div class="cont">
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">BASE IMPONIBLE:</p>
+                        <p>Ejemplo</p>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">IMPORTE TOTAL:</p>
+                        <p>Ejemplo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="cont">
+                    <div class="text-inline border">
+                        <p style="margin-left: 10px" class="tx">Añadir Producto</p>
+                        <div  style="display: flex; " >
+                            <p class="p-m">Iva</p>
+                            <p class="p-m">Cantidad</p>
+                            <p class="p-m">Descuento</p>
+                            <p class="p-m">Base Imponible</p>   
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div>
+                <div class="cont">
+                    <div class="text-inline border">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-align: left ;background-color: #fff; font-size: small;">
+                              Seleccionar un producto
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                            </ul>
+                        </div>
+                        <div style="display: flex;" >
+                            <input type="text" class="form-control" id="iva" placeholder="Iva">
+                            <input type="text" class="form-control" id="cantidad" placeholder="Cantidad">
+                            <input type="text" class="form-control" id="descuento" placeholder="Descuento">
+                            <input type="text" class="form-control" id="baseImponible" placeholder="Base">
+                            <button mat-raised-button style="background-color: #4c8eb7; margin-left: 5px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </button>                                
+                        </div>                      
+                    </div>                    
+                </div>
+            </div>
+
+            <div>
+                <div class="cont">
+                    <div class="text-inline border">
+                        <p style="margin-left: 10px" class="tx">Producto</p>
+                        <div  style="display: flex; " >
+                            <p class="p-c">Iva</p>
+                            <p class="p-c">Cantidad</p>
+                            <p class="p-c">Descuento</p>
+                            <p class="p-c">Base Imponible</p>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="cont-none">
+                    <div class="text-inline" style="justify-content: flex-end;">
+                        <div style="justify-content: flex-end;">
+                            <button mat-raised-button style="background-color: #4c8eb7;color: #fff; margin-right: 10px;"> Validar</button>
+                            <button mat-raised-button style="background-color: #4c8eb7; color: #fff;"> Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="cont-none">
+                    <div class="text-inline" style="justify-content: flex-end;">
+                            <button mat-raised-button class="btn-c"> Modificar</button>
+                            <button mat-raised-button class="btn-c"> Aprobar Pedido</button>
+                            <button mat-raised-button class="btn-c"> Rechazar Pediido</button>
+                            <button mat-raised-button class="btn-c"> Eliminar</button>
+                    </div>
+                </div>                   
+            </div> 
+
+            <div class="cont-none">
+                <div>
+                    <button mat-raised-button class="btn-documents"> Documentos</button>
+                </div>
+                <div>
+                    <button mat-raised-button class="btn-documents"> .PDF</button>
+                </div>                    
+            </div>
+            
+            <div>
+                <div class="cont-none">
+                    <div class="text-inline" style="justify-content: flex-end;">
+                            <button mat-raised-button class="btn-c"> Contactar</button>
+                            <button mat-raised-button class="btn-c"> Desaprobar</button>
+                            <button mat-raised-button class="btn-c"> Realizar Pedido</button>
+                            <button mat-raised-button class="btn-c"> Anular Pedido</button>
+                            <button mat-raised-button class="btn-c"> Crear Factura</button>
+                            <button mat-raised-button class="btn-c"> Eliminar</button>
+                    </div>
+                </div>                   
+            </div> 
+
+            <div>
+                <div class="cont">
+                    <div class="text-inline border">
+                        <p style="margin-left: 10px" class="tx">Productos</p>
+                        <div  style="display: flex; " >
+                            <p class="p-m">Iva</p>
+                            <p class="p-m">Cantidad</p>
+                            <p class="p-m">Descuento</p>
+                            <p class="p-m">Base Imponible</p>   
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div>
+                <div class="cont-none">
+                    <div class="text-inline" style="justify-content: flex-end;">
+                            <button mat-raised-button class="btn-c"> Contactar</button>
+                            <button mat-raised-button class="btn-c"> Clasificar Recepcion</button>
+                            <button mat-raised-button class="btn-c"> Eliminar</button>
+                    </div>
+                </div>                   
+            </div> 
+
+            <div class="cont">
+                <p class="r-p">REALIZAR PEDIDO</p>
+                <br>
+                <div class="text-inline">
+                    <p style="margin-right: 10px" class="tx">FECHA DE PEDIDO:</p>
+                    <input type="date" style="width: 15%" class="form-control">          
+                </div>
+                <br>
+                <div class="text-inline">
+                    <p style="margin-right: 10px" class="tx">MÉTODO DE PEDIDO:</p>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-align: left ;background-color: #fff; font-size: small;">
+                          Seleccionar un método
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <!--Agregar metodos de pedido-->
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                </div>
+                <br>
+                <div class="text-inline">
+                    <p style="margin-right: 10px" class="tx">COMENTARIO DE PAGO:</p>
+                    <input  class="form-control" name="comentario" style="width: 50%;font-size: small">
+                </div> 
+                <br>
+                <div>
+                    <button mat-raised-button class="btn-c"> Confirmar Pedido</button>
+                    <button mat-raised-button class="btn-c">Anular</button>
+                </div>               
+            </div>
+
+            <!--Modal VALIDAR PEDIDO-->
+            <div id="modalValidateOrder" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content" style="padding: 10px;">
+                        <form action="">
+                            <div class="form-group">
+                                <label style="font-size: 25px; " for="Nombre">VALIDAR PEDIDO</label>
+                                <br>                    
+                                <p>¿ESTA SEGURO DE QUERER VALIDAR ESTE PEDIDO?</p>                   
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <button type="button" id="btnValidate"  class="btn btn-modals">SI</button>
+                                <button type="button" id="btnCloseModal" class="btn btn-modals">NO</button>           
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--fin modal -->
+
+            <div class="cont">
+                <p class="r-p">RECEPCION</p>
+                <br>
+                <div class="text-inline">
+                    <p style="margin-right: 10px" class="tx">FECHA DE ENTREGA:</p>
+                    <input type="date" style="width: 15%" class="form-control">          
+                </div>
+                <br>
+                <div class="text-inline">
+                    <p style="margin-right: 10px" class="tx">TIPO DE ENVIO:</p>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-align: left ;background-color: #fff; font-size: small;">
+                          Seleccionar un método
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <!--Agregar metodos de envio-->
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                </div>
+                <br>
+                <div class="text-inline">
+                    <p style="margin-right: 10px" class="tx">COMENTARIO:</p>
+                    <input  class="form-control" name="comentario" style="width: 50%;font-size: small">
+                </div> 
+                <br>
+                <div>
+                    <button mat-raised-button class="btn-c"> Confirmar Recepcion</button>
+                </div>               
+            </div>
+            <!--Modal APROBAR PEDIDO-->
+            <div id="modalApproveOrder" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content" style="padding: 10px;">
+                        <form action="">
+                            <div class="form-group">
+                                <label style="font-size: 25px; " for="Nombre">APROBAR PEDIDO</label>
+                                <br>                    
+                                <p>¿ESTA SEGURO DE QUERER aprobar el pedido 
+                                    de proveedor? (solo usuarios con permisos, 
+                                    si el usuario que crea un pedido de proveedor
+                                    entonces la validación y aprobación se hara 
+                                    automaticas)</p>                   
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <button type="button" id="btnValidate"  class="btn btn-modals">SI</button>
+                                <button type="button" id="btnCloseModal" class="btn btn-modals">NO</button>           
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--fin modal -->
+             <!--Modal Realizar  PEDIDO-->
+             <div id="modalPlaceOrder" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content" style="padding: 10px;">
+                        <form action="">
+                            <div class="form-group">
+                                <label style="font-size: 25px; " for="Nombre">REALIZAR PEDIDO</label>
+                                <br>                    
+                                <p>¿ESTA SEGURO DE QUERER CONFIRMAR ESTE PEDIDO
+                                    EN FECHA DE:</p>
+                                <p>00-00-0000?</p>                   
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <button type="button" id="btnValidate"  class="btn btn-modals">SI</button>
+                                <button type="button" id="btnCloseModal" class="btn btn-modals">NO</button>           
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--fin modal -->
+        </div>
+        <div>
+        </div>
+    </div>
+</div>

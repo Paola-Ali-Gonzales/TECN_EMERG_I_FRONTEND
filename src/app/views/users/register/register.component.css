@@ -1,0 +1,105 @@
+.content{
+	width: 750px !important;
+	max-width: 100% !important;
+	background: #FFFFFF;
+	border: 1px solid #EFF0F7;
+	box-shadow: 0px 5px 16px rgba(8, 15, 52, 0.06);
+	margin: 100px auto 0 !important;
+	padding: 50px !important;
+	border-radius: 34px;
+}
+.header-business h2{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.line {
+    border-top: 1px solid #D9DBE9;
+    height: 2px;
+    max-width: 700px;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.form-row > .col {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+.input-register{
+    background: #FFFFFF;
+    border: 1px solid #EFF0F7;
+    box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+    border-radius: 46px;
+    height: 43px;
+    font-size: 15px;
+}
+.text-input{
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.row{
+    margin-top: 8px;
+}
+
+.btn-submit{
+    width: 80%;
+    color: #FFFFFF;
+    background: #00AEE1;
+    box-shadow: 0px 3px 12px rgba(74, 58, 255, 0.18);
+    border-radius: 10px;
+    height: 45px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.btn-submit:hover{
+    background: #46c5ec;
+}
+
+.btn-content{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+
+}
+
+.input-wrapper {
+	position: relative;
+}
+
+.input-icon {
+	color: #191919;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+
+    left: unset;
+    right: 15px;
+}

@@ -1,0 +1,46 @@
+.container-side{ 
+    margin: 15px 15px 15px 15px;
+    width: 220px; 
+    /*text-transform: uppercase;*/ 
+    font-size: 11px; 
+    line-height: 110%; 
+    padding: 4px; 
+    background: #FFFFFF; 
+    border: 1px solid #EFF0F7; 
+    box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07); 
+    border-radius: 20px; 
+    position: relative;
+} 
+ 
+.header-section{ 
+    letter-spacing: 2px; 
+    font-weight: 600; 
+    font-size: 12px; 
+    line-height: 110%; 
+    color: #0A457F; 
+    margin-top: 6px; 
+ 
+} 
+.line { 
+    border-top: 1px solid #D9DBE9; 
+    height: 1px; 
+    padding: 0; 
+    margin-top: -5px; 
+    margin-bottom: 10px; 
+} 
+ 
+.list-supplier{ 
+    margin-left: 13px; 
+} 
+ 
+.link-c{ 
+    letter-spacing: 3px; 
+    color: #4c86c1; 
+    font-weight: 600; 
+} 
+ 
+.link-c:hover{ 
+    letter-spacing: 3px; 
+    color: #0A457F; 
+    font-weight: 600; 
+}

@@ -1,0 +1,325 @@
+<div class="container cont-r">
+    <form>
+        <div class="form_1 data_info">
+            <div class="line"></div>
+            <div class="header-rg">
+                <h1><b>{{titulo}}</b></h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Nombre producto:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control input-register" id="name" placeholder="Nombre producto" name="nombre" [(ngModel)]="producto.name">
+                                <div class="alert alert-danger" *ngIf="error?.name">
+                                    {{ error.name }}
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-shopping-cart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="6" cy="19" r="2"></circle>
+                                    <circle cx="17" cy="19" r="2"></circle>
+                                    <path d="M17 17h-11v-14h-2"></path>
+                                    <path d="M6 5l14 1l-1 7h-13"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Descripcion</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control input-register" id="description" placeholder="Descripcion" name="descripcion" [(ngModel)]="producto.description">
+                                <div class="alert alert-danger" *ngIf="error?.description">
+                                    {{ error.description }}
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-truck-loading" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M2 3h1a2 2 0 0 1 2 2v10a2 2 0 0 0 2 2h15"></path>
+                                    <rect x="9" y="6" width="10" height="8" rx="3"></rect>
+                                    <circle cx="9" cy="19" r="2"></circle>
+                                    <circle cx="18" cy="19" r="2"></circle>
+                                 </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Encargado:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control input-register" id="dutyManager" placeholder="Encargado" name="encargado" [(ngModel)]="producto.dutyManager">
+                                <div class="alert alert-danger" *ngIf="error?.dutyManager">
+                                    {{ error.dutyManager }}
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                                 </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Iva:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control input-register" id="iva" name="iva" placeholder="Iva" [(ngModel)]="producto.iva">
+                                <div class="alert alert-danger" *ngIf="error?.iva">
+                                    {{ error.iva }}
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-building-warehouse" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M3 21v-13l9 -4l9 4v13"></path>
+                                    <path d="M13 13h4v8h-10v-6h6"></path>
+                                    <path d="M13 21v-9a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v3"></path>
+                                 </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Precio Unitario:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control input-register" id="price" name="precio" placeholder="Precio Unitario" [(ngModel)]="producto.price">
+                                <div class="alert alert-danger" *ngIf="error?.price">
+                                    {{ error.price }}
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-section" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M20 20h.01"></path>
+                                    <path d="M4 20h.01"></path>
+                                    <path d="M8 20h.01"></path>
+                                    <path d="M12 20h.01"></path>
+                                    <path d="M16 20h.01"></path>
+                                    <path d="M20 4h.01"></path>
+                                    <path d="M4 4h.01"></path>
+                                    <path d="M8 4h.01"></path>
+                                    <path d="M12 4h.01"></path>
+                                    <path d="M16 4l0 0"></path>
+                                    <rect x="4" y="8" width="16" height="8" rx="1"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Cantidad:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="number" class="form-control input-register" id="quantity" name="cantidad" placeholder="Cantidad" [(ngModel)]="producto.quantity">
+                                <div class="alert alert-danger" *ngIf="error?.quantity">
+                                    {{ error.quantity }}
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-calculator" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+                                    <rect x="8" y="7" width="8" height="3" rx="1"></rect>
+                                    <line x1="8" y1="14" x2="8" y2="14.01"></line>
+                                    <line x1="12" y1="14" x2="12" y2="14.01"></line>
+                                    <line x1="16" y1="14" x2="16" y2="14.01"></line>
+                                    <line x1="8" y1="17" x2="8" y2="17.01"></line>
+                                    <line x1="12" y1="17" x2="12" y2="17.01"></line>
+                                    <line x1="16" y1="17" x2="16" y2="17.01"></line>
+                                 </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Tipo de producto:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control input-register" id="category" name="categoria" placeholder="Tipo de producto" [(ngModel)]="producto.category">
+                                <div class="alert alert-danger" *ngIf="error?.category">
+                                    {{ error.category }}
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-dots-circle-horizontal" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <line x1="8" y1="12" x2="8" y2="12.01"></line>
+                                    <line x1="12" y1="12" x2="12" y2="12.01"></line>
+                                    <line x1="16" y1="12" x2="16" y2="12.01"></line>
+                                 </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!--
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Tipo de paquete:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control input-register" id="tipo-paquete" placeholder="Tipo de paquete">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-package" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
+                                    <line x1="12" y1="12" x2="20" y2="7.5"></line>
+                                    <line x1="12" y1="12" x2="12" y2="21"></line>
+                                    <line x1="12" y1="12" x2="4" y2="7.5"></line>
+                                    <line x1="16" y1="5.25" x2="8" y2="9.75"></line>
+                                 </svg>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="row">
+                <!--
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Tamaño unitario:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control input-register" id="unitario" placeholder="Tamaño unitario">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-resize" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M4 11v8a1 1 0 0 0 1 1h8m-9 -14v-1a1 1 0 0 1 1 -1h1m5 0h2m5 0h1a1 1 0 0 1 1 1v1m0 5v2m0 5v1a1 1 0 0 1 -1 1h-1"></path>
+                                    <path d="M4 12h7a1 1 0 0 1 1 1v7"></path>
+                                 </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!--
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Fecha ingreso:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="date" class="form-control input-register" id="createDate" name="fecha_creacion" [(ngModel)]="producto.createDate" >
+                                <div class="alert alert-danger" *ngIf="error?.createDate">
+                                    {{ error.createDate }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Marca:</label>
+                            <div class="col-sm-8">
+                                <div class="input-wrapper">
+                                    <input type="text" class="form-control input-register" id="brand" name="marca" placeholder=" Marca" [(ngModel)]="producto.brand">
+                                    <div class="alert alert-danger" *ngIf="error?.brand">
+                                        {{ error.brand }}
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-box" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
+                                        <line x1="12" y1="12" x2="20" y2="7.5"></line>
+                                        <line x1="12" y1="12" x2="12" y2="21"></line>
+                                        <line x1="12" y1="12" x2="4" y2="7.5"></line>
+                                     </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Fecha de expiracion:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="date" class="form-control input-register" id="expireDate" name="fecha_expiracion"[ngModel]="producto.expireDate | date:'yyyy-MM-dd' : 'UTC'"  (ngModelChange)="producto.expireDate = $event" placeholder="fecha" #fecha>
+                                <div class="alert alert-danger" *ngIf="error?.expireDate">
+                                    {{ error.expireDate }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Fragilidad:</label>
+                        <div class="col-sm-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">
+                                  Cuidado
+                                </label>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!--
+            <div class="row">
+                <h3 style="color: #0A457F;"><b>Dimensiones</b></h3>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Altura:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="number" class="form-control input-register" id="email" placeholder="Altura">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-dimensions" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M3 5h11"></path>
+                                    <path d="M12 7l2 -2l-2 -2"></path>
+                                    <path d="M5 3l-2 2l2 2"></path>
+                                    <path d="M19 10v11"></path>
+                                    <path d="M17 19l2 2l2 -2"></path>
+                                    <path d="M21 12l-2 -2l-2 2"></path>
+                                    <rect x="3" y="10" width="11" height="11" rx="2"></rect>
+                                 </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-4 label-col col-form-label">Ancho:</label>
+                        <div class="col-sm-8">
+                            <div class="input-wrapper">
+                                <input type="number" class="form-control input-register" id="ancho" placeholder="Ancho">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-dimensions" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M3 5h11"></path>
+                                    <path d="M12 7l2 -2l-2 -2"></path>
+                                    <path d="M5 3l-2 2l2 2"></path>
+                                    <path d="M19 10v11"></path>
+                                    <path d="M17 19l2 2l2 -2"></path>
+                                    <path d="M21 12l-2 -2l-2 2"></path>
+                                    <rect x="3" y="10" width="11" height="11" rx="2"></rect>
+                                 </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+
+        <div class="row btn-c">
+            <div class="form-group">
+            <button type="button" class="btn btn-continue" (click)="producto.productID? editar(): crear()">
+                {{ producto.productID? 'Editar': 'Crear' }}
+            </button>
+            <button type="button" class="btn btn-secondary my-2 btn-style"
+                        routerLink="/listar_productos">volver</button>
+                    </div>
+        </div>
+      </form>
+</div>

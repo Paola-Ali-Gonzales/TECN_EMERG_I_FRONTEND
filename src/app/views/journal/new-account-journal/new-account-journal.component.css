@@ -1,0 +1,31 @@
+table {
+    align-items: center;
+    width: 70%;
+}
+.container{
+    width: 90%;
+    max-width: 300;
+    border-radius:20px;
+}
+.pointer{
+    cursor: pointer;
+}
+.mat-form-field {
+    font-size: 20px;
+    width: 100%;
+}
+p{
+    font-size: 30px;
+    color: #170F49;
+    text-align: center;
+}
+.width{
+    width: 70%;
+    background-color: #00AEE1;
+    color: white;
+}
+.widthC{
+    width: 70%;
+    background-color: #0A457F;
+    color: white;
+}

@@ -1,0 +1,36 @@
+<div class="content-all">
+    <button class="btn btn-submit" style="margin-bottom: 10px;" data-toggle="modal" id="btn-addrack"  routerLink="/formRack" >Nuevo Estante</button>
+      <div fxLayout="row wrap" fxLayoutGap="26px grid">
+        <div [fxFlex]="(100/4) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let rack of racks">
+          <mat-card class="mat-elevation-z4 card-rack" >
+            <div class="header-card" style="display: inline-flex; justify-content: space-between;">
+              <p style="margin:12px;">{{rack.description}}</p>
+              <div class="buttons-edit-delete">
+                  <button [routerLink]="['/formRack', rack.idRack]" mat-mini-fab style="background: #0A457F; margin: 2px;width: 37px; height: 37px;" aria-label="Example icon button with a plus one icon" >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="24" height="24" viewBox="0 0 25 27" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
+                      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5"></line>
+                   </svg>
+                  </button>
+                  <button (click)="eliminar(rack)" mat-mini-fab style="background: #0A457F; margin: 3px;width: 37px; height: 37px;" aria-label="Example icon button with a plus one icon" >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 25 27" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <line x1="4" y1="7" x2="20" y2="7"></line>
+                      <line x1="10" y1="11" x2="10" y2="17"></line>
+                      <line x1="14" y1="11" x2="14" y2="17"></line>
+                      <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+                      <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                   </svg>
+                  </button>
+              </div>
+            </div>
+            <mat-card-content class="content-card">
+              <p> <b>Cantidad de Productos: {{rack.products.length}}</b> </p>
+            </mat-card-content>
+            <div class="content-btn">
+              <button class="btn btn-submit" [routerLink]="['/asignar-producto', rack.idRack]" >Añadir Producto</button>
+            </div>
+          </mat-card>
+        </div>
+      </div>

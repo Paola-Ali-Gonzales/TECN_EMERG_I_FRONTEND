@@ -1,0 +1,124 @@
+<div class="container cont-all">
+    <div class="cont-header">
+        <h2 class="header-1">NUEVO PEDIDO A PROVEEDOR</h2>
+    </div>
+    <div class="content">            
+        <div class="row">
+            <div>
+                <div class="cont">
+                    <div class="text-inline">
+                        <p  class="text-c">REF.</p>
+                        <input  type="text" class="form-control" id="referencia" placeholder="Referencia">
+                    </div>
+                    <br>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px;" class="text-c">PROVEEDOR: </p> 
+                        <input  type="text" class="form-control" id="proveedor" placeholder="Nombre del proveedor">
+                    </div>  
+                    <br>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="text-c">DESCUENTOS:</p>
+                        <input type="text" class="form-control" id="descuento" placeholder="Descuento">
+                    </div>
+                    <br>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="text-c">CONDICIONES DE PAGO:</p>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-align: left ;background-color: #fff; font-size: small;">
+                              CONDICIONES
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <!--Agregar metodos de pedido-->
+                            </ul>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="text-c">FECHA DE ENTREGA:</p>
+                        <input type="date" style="width: 15%" class="form-control">          
+                    </div>
+                    <br>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="text-c">DIVISAS:</p>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-align: left ;background-color: #fff; font-size: small;">
+                               SELECCIONAR UNA DIVISA
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <!--Agregar metodos de pedido-->
+                            </ul>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="text-c">NOTA:</p>
+                        <input type="text" class="form-control" id="nota" placeholder="Escribe una nota">
+                    </div>
+                    <br>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px;" class="text-c">PRESUPUESTO DE PROVEEDOR:</p>
+                        <div class="dropdown" >
+                            <button class="btn dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-align: left ;background-color: #fff; font-size: small;">
+                               SELECCIONAR UN PRESUPUESTO
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <!--Agregar metodos de pedido-->
+                            </ul>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="text-c">BASE IMPONIBLE:</p>
+                        <input type="text" class="form-control" id="nota" placeholder="Cantidad de base imponible">
+                    </div>
+                    <br>
+                    <div class="text-inline">
+                        <button mat-raised-button class="btn-c">Crear Borrador</button>
+                        <button mat-raised-button class="btn-c"> Anular</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+            <div class="cont">
+                <div class="text-inline border">
+                    <p style="margin-left: 10px" class="tx">PRODUCTOS Y SERVICIOS</p>                   
+                </div>                    
+            </div>
+            <div class="cont">
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">   
+                    <!-- Referencia Column -->
+                    <ng-container matColumnDef="referencia">
+                        <th mat-header-cell *matHeaderCellDef> Referencia </th>
+                        <td mat-cell *matCellDef="let element"> {{element.referencia}} </td>
+                    </ng-container>
+                    <!-- descripcion Column -->
+                    <ng-container matColumnDef="descripcion">
+                      <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+                      <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+                    </ng-container>
+                    <!-- Tasa de Iva Column -->
+                    <ng-container matColumnDef="tasaIva">
+                      <th mat-header-cell *matHeaderCellDef>Tasa de Iva</th>
+                      <td mat-cell *matCellDef="let element"> {{element.tasaIva}} </td>
+                    </ng-container>
+                    <!-- precioUnitario Column -->
+                    <ng-container matColumnDef="precioUnitario">
+                      <th mat-header-cell *matHeaderCellDef>Precio Unitarioo</th>
+                      <td mat-cell *matCellDef="let element"> {{element.precioUnitario}} </td>
+                    </ng-container>   
+                    <!-- cantidad Column -->
+                    <ng-container matColumnDef="cantidad">
+                      <th mat-header-cell *matHeaderCellDef>Cantidad</th>
+                      <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+                    </ng-container>   
+                    <!-- descuento Column -->
+                    <ng-container matColumnDef="descuento">
+                        <th mat-header-cell *matHeaderCellDef>Descuento</th>
+                        <td mat-cell *matCellDef="let element"> {{element.descuento}} </td>
+                    </ng-container>                                                           
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>    
+            </div>               
+    </div>
+</div>

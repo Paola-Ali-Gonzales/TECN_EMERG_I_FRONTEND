@@ -1,0 +1,58 @@
+<script type="text/javascript" src="../../../assets/script.js"></script>
+<div class="principal">
+    <div class="row justify-content-md-center">
+        
+
+        <div id="list-products" class="col col-lg">
+            <div class="row justify-content-between">
+                <h2 class="col-10" >Lista de Ventas</h2>
+               
+                    <button class="col-2 btn btn-outline-success" type="button"  (click)="hacerUnaVenta()"  >+ Hacer una venta</button>
+              
+            </div>
+            <table class="table " >
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            Cliente
+                        </th>
+                        <th scope="col">
+                            Total
+                        </th>
+                        <th scope="col">
+                            Cantidad Productos
+                        
+                        </th >
+                        <th scope="col">
+                            Fecha de venta
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of ventas">
+                        <td>
+                            <div>
+                                <h6><b> {{item.cliente.nombre}} {{item.cliente.apellidos}}</b></h6>
+                            </div>
+                            <p>Nit: {{item.cliente.nitCi}}</p>
+                        </td>
+                        <td>
+                            {{item.total}}
+                        </td>
+                        <td>{{item.detallesVentas.length}}</td>
+                        <td>{{item.fechaActualizacion}}</td>
+                        
+                    </tr>
+                    
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+            
+            
+            
+
+        </div>
+</div>

@@ -1,0 +1,146 @@
+<div class="container cont-all">
+    <div class="cont-header">
+        <p class="header-1">FICHA DE PRESUPUESTO</p>
+    </div>
+    <div class="content">
+        <a class="link-list">VOLVER A LISTADO</a>
+        <p style="margin-top: 20px" class="text-c">REF. PROVEEDOR</p>
+        <div class="text-inline">
+            <p style="margin-right: 10px" class="text-c">PROVEEDOR: </p> 
+            <p>Nombre de proveedor </p>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+            <div class="col-md-6 cont-b">
+                <div class="cont">
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">DESCUENTOS:</p>
+                        <div class="input-wrapper">
+                            <input type="number" class="form-control input-register" id="descuento" placeholder="Descuento">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-discount" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <line x1="9" y1="15" x2="15" y2="9"></line>
+                                <circle cx="9.5" cy="9.5" r=".5" fill="currentColor"></circle>
+                                <circle cx="14.5" cy="14.5" r=".5" fill="currentColor"></circle>
+                                <circle cx="12" cy="12" r="9"></circle>
+                             </svg>
+                        </div>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">CONDICIONES DE PAGO (30 DIAS):</p>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control input-register" id="condiciones" placeholder="Condiciones">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-wallet" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12"></path>
+                                <path d="M20 12v4h-4a2 2 0 0 1 0 -4h4"></path>
+                             </svg>
+                        </div>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">FECHA DE ENTREGA:</p>
+                        <div class="input-wrapper">
+                            <input type="date" class="form-control input-register" id="email">
+                        </div>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">TIPO DE PAGO (CHEQUE):</p>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control input-register" id="tipo-pago" placeholder="Tipo de pago">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-dimensions" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M3 5h11"></path>
+                                <path d="M12 7l2 -2l-2 -2"></path>
+                                <path d="M5 3l-2 2l2 2"></path>
+                                <path d="M19 10v11"></path>
+                                <path d="M17 19l2 2l2 -2"></path>
+                                <path d="M21 12l-2 -2l-2 2"></path>
+                                <rect x="3" y="10" width="11" height="11" rx="2"></rect>
+                             </svg>
+                        </div>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">DIVISA:</p>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control input-register" id="divisa" placeholder="Divisa">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-cash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="7" y="9" width="14" height="10" rx="2"></rect>
+                                <circle cx="14" cy="14" r="2"></circle>
+                                <path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2"></path>
+                             </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 cont-b">
+                <div class="cont">
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">BASE IMPONIBLE:</p>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control input-register" id="base-imponible" placeholder="Base imponible">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-moneybag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M9.5 3h5a1.5 1.5 0 0 1 1.5 1.5a3.5 3.5 0 0 1 -3.5 3.5h-1a3.5 3.5 0 0 1 -3.5 -3.5a1.5 1.5 0 0 1 1.5 -1.5z"></path>
+                                <path d="M4 17v-1a8 8 0 1 1 16 0v1a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                             </svg>
+                        </div>
+                    </div>
+                    <div class="text-inline">
+                        <p style="margin-right: 10px" class="tx">IMPORTE TOTAL:</p>
+                        <div class="input-wrapper">
+                            <input type="number" class="form-control input-register" id="importe" placeholder="Importe total">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon input-icon icon-tabler icon-tabler-receipt-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2"></path>
+                                <path d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5"></path>
+                             </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table align-middle mb-0 bg-white table-hover">
+                <thead class="bg-light table-light">
+                  <tr class="text-th">
+                    <th>Descripción</th>
+                    <th class="td-tx">Precio Unitario</th>
+                    <th class="td-tx">Cantidad</th>
+                    <th class="td-tx">Descuento</th>
+                    <th class="td-tx">Base Imponible</th>
+                    
+                  </tr>
+                </thead>
+                <tbody *ngFor="let card of products">
+                  <tr>
+                    <td>
+                      <p class="fw-normal mb-1">{{card.description}}</p>
+                    </td>
+                    <td class="td-tx">
+                      <p>{{card.unit_price}}</p>
+                    </td>
+                    <td class="td-tx">
+                      <p>{{card.unit_price}}</p>
+                    </td>
+                    <td class="td-tx">
+                      <p>{{card.quantity}}</p>
+                    </td>
+                    <td class="td-tx">
+                      <p>{{card.taxable_income}}</p>
+                    </td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="row">
+            <div class="content-btn">
+                <button class="btn">Eliminar</button>
+                <button class="btn">Cerrar</button>
+                <button class="btn">Crear Pedido</button>
+                <button class="btn">Reabrir</button>
+            </div>
+        </div>
+    </div>
+</div>

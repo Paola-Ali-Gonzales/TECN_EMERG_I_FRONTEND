@@ -1,0 +1,295 @@
+<div class="container cont-header">
+	<h1><b>Crea el perfil de tu empresa</b></h1>
+</div>
+<div class="wrapper">
+	<div class="headerNum">
+		<ul>
+			<li class="active form_1_progessbar">
+				<div>
+					<p>1</p>
+				</div>
+			</li>
+			<li class="form_2_progessbar">
+				<div>
+					<p>2</p>
+				</div>
+			</li>
+			<li class="form_3_progessbar">
+				<div>
+					<p>3</p>
+				</div>
+			</li>
+            <li class="form_4_progessbar">
+				<div>
+					<p>4</p>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+	<div class="form_wrap">
+		<form [formGroup]="registerForm">
+			<div class="form_1 data_info">
+				<div class="line"></div>
+				<div class="header-rg">
+					<h1 >Datos personales</h1>
+					<p>Los siguientes datos a llenar deben pertenecer al dueño o persona 
+						encargada de la empresa.</p>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-input" for="Nombre">Nombre</label>
+							<div class="input-wrapper">
+								<input [(ngModel)]="usuario.name" formControlName="name" type="text" name="name" class="form-control input-register" id="Nombre" placeholder="Nombre">
+								<svg class="svg-icon input-icon" viewBox="0 0 20 20">
+								<path fill="#A0A3BD" d="M10,10.9c2.373,0,4.303-1.932,4.303-4.306c0-2.372-1.93-4.302-4.303-4.302S5.696,4.223,5.696,6.594C5.696,8.969,7.627,10.9,10,10.9z M10,3.331c1.801,0,3.266,1.463,3.266,3.263c0,1.802-1.465,3.267-3.266,3.267c-1.8,0-3.265-1.465-3.265-3.267C6.735,4.794,8.2,3.331,10,3.331z"></path>
+								<path fill="#A0A3BD" d="M10,12.503c-4.418,0-7.878,2.058-7.878,4.685c0,0.288,0.231,0.52,0.52,0.52c0.287,0,0.519-0.231,0.519-0.52c0-1.976,3.132-3.646,6.84-3.646c3.707,0,6.838,1.671,6.838,3.646c0,0.288,0.234,0.52,0.521,0.52s0.52-0.231,0.52-0.52C17.879,14.561,14.418,12.503,10,12.503z"></path>
+								</svg>								
+							</div>
+							<div class="error-messages">
+								<ng-container *ngFor="let error of error_messages.name">
+									<div class="error-message text-danger"
+										*ngIf="registerForm.get('name').hasError(error.type) && (registerForm.get('name').dirty || registerForm.get('name').touched)">                               
+										{{error.message}} 
+									</div>
+								</ng-container>
+							</div>
+						</div>						
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-input" for="Apellido">Apellidos</label>
+							<div class="input-wrapper">
+								<input formControlName="last_name" [(ngModel)]="usuario.last_name" name="apellido" type="text" class="form-control input-register" id="Apellido" placeholder="Apellidos">
+								<svg class="svg-icon input-icon" viewBox="0 0 20 20">
+								<path fill="#A0A3BD" d="M10,10.9c2.373,0,4.303-1.932,4.303-4.306c0-2.372-1.93-4.302-4.303-4.302S5.696,4.223,5.696,6.594C5.696,8.969,7.627,10.9,10,10.9z M10,3.331c1.801,0,3.266,1.463,3.266,3.263c0,1.802-1.465,3.267-3.266,3.267c-1.8,0-3.265-1.465-3.265-3.267C6.735,4.794,8.2,3.331,10,3.331z"></path>
+								<path fill="#A0A3BD" d="M10,12.503c-4.418,0-7.878,2.058-7.878,4.685c0,0.288,0.231,0.52,0.52,0.52c0.287,0,0.519-0.231,0.519-0.52c0-1.976,3.132-3.646,6.84-3.646c3.707,0,6.838,1.671,6.838,3.646c0,0.288,0.234,0.52,0.521,0.52s0.52-0.231,0.52-0.52C17.879,14.561,14.418,12.503,10,12.503z"></path>
+								</svg>								
+							</div>
+							<div class="error-messages">
+								<ng-container *ngFor="let error of error_messages.last_name">
+									<div class="error-message text-danger"
+										*ngIf="registerForm.get('last_name').hasError(error.type) && (registerForm.get('last_name').dirty || registerForm.get('last_name').touched)">                               
+										{{error.message}} 
+									</div>
+								</ng-container>
+							</div>
+						</div>
+					</div>					
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-input" for="email">Correo electrónico</label>
+							<div class="input-wrapper">
+								<input [(ngModel)]="usuario.email" formControlName="email" name="email" type="email" class="form-control input-register" id="email" placeholder="Correo electrónico">
+								<svg class="svg-icon input-icon" viewBox="0 0 20 20">
+									<path fill="#A0A3BD" d="M16.999,4.975L16.999,4.975C16.999,4.975,16.999,4.975,16.999,4.975c-0.419-0.4-0.979-0.654-1.604-0.654H4.606c-0.584,0-1.104,0.236-1.514,0.593C3.076,4.928,3.05,4.925,3.037,4.943C3.034,4.945,3.035,4.95,3.032,4.953C2.574,5.379,2.276,5.975,2.276,6.649v6.702c0,1.285,1.045,2.329,2.33,2.329h10.79c1.285,0,2.328-1.044,2.328-2.329V6.649C17.724,5.989,17.441,5.399,16.999,4.975z M15.396,5.356c0.098,0,0.183,0.035,0.273,0.055l-5.668,4.735L4.382,5.401c0.075-0.014,0.145-0.045,0.224-0.045H15.396z M16.688,13.351c0,0.712-0.581,1.294-1.293,1.294H4.606c-0.714,0-1.294-0.582-1.294-1.294V6.649c0-0.235,0.081-0.445,0.192-0.636l6.162,5.205c0.096,0.081,0.215,0.122,0.334,0.122c0.118,0,0.235-0.041,0.333-0.12l6.189-5.171c0.099,0.181,0.168,0.38,0.168,0.6V13.351z"></path>
+								</svg>								
+							</div>
+							<div class="error-messages">
+								<ng-container *ngFor="let error of error_messages.email">
+									<div class="error-message text-danger"
+										*ngIf="registerForm.get('email').hasError(error.type) && (registerForm.get('email').dirty || registerForm.get('email').touched)">                               
+										{{error.message}} 
+									</div>
+								</ng-container>
+							</div>
+						</div>
+					
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-input" for="contrasenia">Contraseña</label>
+							<input formControlName="password" [(ngModel)]="usuario.password" name="password" type="password" class="form-control input-register" id="contrasenia" placeholder="Contraseña">							
+						</div>
+						<div class="error-messages">
+							<ng-container *ngFor="let error of error_messages.password">
+								<div class="error-message text-danger"
+									*ngIf="registerForm.get('password').hasError(error.type) && (registerForm.get('password').dirty || registerForm.get('password').touched)">                               
+									{{error.message}} 
+								</div>
+							</ng-container>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-input" for="conf-contrasenia">Confirmar contraseña</label>
+							<input formControlName="confirmPassword" type="password" class="form-control input-register" id="conf-contrasenia" placeholder="Confirmar contraseña">							
+						</div>
+						<div class="error-messages">
+							<ng-container *ngFor="let error of error_messages.confirmPassword">
+								<div class="error-message text-danger"
+									*ngIf="registerForm.get('confirmPassword').hasError(error.type) && (registerForm.get('confirmPassword').dirty || registerForm.get('confirmPassword').touched)">                               
+									{{error.message}} 
+								</div>
+							</ng-container>
+							<div class="error-message text-danger"
+							*ngIf="registerForm.get('confirmPassword').getError('Mustmatch')!=null">
+								<span>Las contraseñas no coinciden.</span>                                                    
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form_2 data_info" style="display: none;">
+				<div class="line"></div>
+				<div class="header-rg">
+					<h1 >Datos de la Empresa</h1>
+					<p>Los siguientes datos a llenar deben pertenecer a la empresa.</p>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-input" for="Nombre_Empresa">Nombre</label>
+							<div class="input-wrapper">
+								<input [(ngModel)]="empresa.business_name" formControlName="business_name" name="business_name" type="text" class="form-control input-register" id="Nombre_Empresa" placeholder="Nombre de la empresa">
+								<svg class="w-6 h-6 input-icon" fill="none" stroke="#A0A3BD" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>								
+							</div>
+							<div class="error-messages">
+								<ng-container *ngFor="let error of error_messages.business_name">
+									<div class="error-message text-danger"
+										*ngIf="registerForm.get('business_name').hasError(error.type) && (registerForm.get('business_name').dirty || registerForm.get('business_name').touched)">                               
+										{{error.message}} 
+									</div>
+								</ng-container>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-input" for="telephone">Número telefónico</label>
+							<div class="input-wrapper">
+								<input [(ngModel)]="empresa.phone_number" formControlName="phone_number" name="phone_number" type="text" class="form-control input-register" id="telephone" placeholder="(+591) 456 - 7890">
+								<svg class="w-6 h-6 input-icon" fill="none" stroke="#A0A3BD" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>								
+							</div>
+							<div class="error-messages">
+								<ng-container *ngFor="let error of error_messages.phone_number">
+									<div class="error-message text-danger"
+										*ngIf="registerForm.get('phone_number').hasError(error.type) && (registerForm.get('phone_number').dirty || registerForm.get('phone_number').touched)">                               
+										{{error.message}} 
+									</div>
+								</ng-container>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-input" for="nit">Nit</label>
+							<input [(ngModel)]="empresa.nit" formControlName="nit" name="nit" type="text" class="form-control input-register" id="nit" placeholder="Nit de la empresa">							
+						</div>
+						<div class="error-messages">
+							<ng-container *ngFor="let error of error_messages.nit">
+								<div class="error-message text-danger"
+									*ngIf="registerForm.get('nit').hasError(error.type) && (registerForm.get('nit').dirty || registerForm.get('nit').touched)">                               
+									{{error.message}} 
+								</div>
+							</ng-container>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-input" for="Sucursal">Sucursal</label>
+							<input [(ngModel)]="empresa.direction" formControlName="direction" name="direction" type="text" class="form-control input-register" id="Sucursal" placeholder="Av. x...">							
+						</div>
+						<div class="error-messages">
+							<ng-container *ngFor="let error of error_messages.direction">
+								<div class="error-message text-danger"
+									*ngIf="registerForm.get('direction').hasError(error.type) && (registerForm.get('direction').dirty || registerForm.get('direction').touched)">                               
+									{{error.message}} 
+								</div>
+							</ng-container>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form_3 data_info" style="display: none;">
+				<div class="line"></div>
+				<div class="header-rg">
+					<h1>Tipo de Empresa</h1>
+					<p>Seleccione el tipo de empresa con el cual se identifique:</p>
+				</div>
+				<div class="row">
+					<div class="content-select">
+						<ng-select class="select" 
+								name="type" 
+								[items]="type_business" 
+								bindLabel="name" 
+								bindValue="name" 
+								placeholder="Selecciona el tipo de empresa"
+								[(ngModel)]="empresa.type"
+								formControlName="type">
+						</ng-select>						
+					</div>
+					<div class="error-messages">
+						<ng-container *ngFor="let error of error_messages.type">
+							<div class="error-message text-danger"
+								*ngIf="registerForm.get('type').hasError(error.type) && (registerForm.get('type').dirty || registerForm.get('type').touched)">                               
+								{{error.message}} 
+							</div>
+						</ng-container>
+					</div>
+				</div>
+
+			</div>
+			<div class="form_4 data_info" style="display: none;">
+				<div class="line"></div>
+				<div class="header-rg">
+					<h1>Elige las categorías de tu empresa:</h1>
+				</div>
+				<div style="margin-top: 35px; margin-bottom: 85px" class="row">
+					<ng-select [items]="categoriesList"
+							name="categories"
+							bindLabel="category_name"
+							bindValue="id"
+							[multiple]="true"
+							placeholder="Selecciona las categorías"
+							[(ngModel)]="selectedCategories"
+							formControlName="categories">
+					</ng-select>	
+					<div class="error-messages">
+						<ng-container *ngFor="let error of error_messages.categories">
+							<div class="error-message text-danger"
+								*ngIf="registerForm.get('categories').hasError(error.type) && (registerForm.get('categories').dirty || registerForm.get('categories').touched)">                               
+								{{error.message}} 
+							</div>
+						</ng-container>
+					</div>
+			   </div>
+			   <div class="error-message text-danger" *ngIf="!registerForm.valid">
+			   <span>Existen campos erróneos, revise bien los datos insertados.</span>                                                    
+		   </div>
+			</div>
+		</form>
+	</div>
+	<div class="btns_wrap">
+		<div class="common_btns form_1_btns">
+			<button type="button" class="btn_next">Siguiente<span class="icon"><i name="arrow-forward-sharp"></i></span></button>
+		</div>
+		<div class="common_btns form_2_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><i name="arrow-back-sharp"></i></span>Atrás</button>
+			<button type="button" class="btn_next">Siguiente<span class="icon"><i name="arrow-forward-sharp"></i></span></button>
+		</div>
+		<div class="common_btns form_3_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><i name="arrow-back-sharp"></i></span>Atrás</button>
+			<button type="button" class="btn_next">Siguiente<span class="icon"><i name="arrow-forward-sharp"></i></span></button>
+		</div>
+        <div class="common_btns form_4_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><i name="arrow-back-sharp"></i></span>Atrás</button>
+			<button type="button" class="btn_done" (click)="enviar()">Enviar</button>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="modal_wrapper">
+	<div class="shadow"></div>
+	<div class="success_wrap">
+		<span class="modal_icon"><i name="checkmark-sharp"></i></span>
+		<p>You have successfully completed the process.</p>
+	</div>
+</div> -->

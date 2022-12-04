@@ -1,0 +1,280 @@
+<div class="principal">
+    <div class="row justify-content-md-center">
+        
+        <div id="list-products" class="col col-lg">
+            <h2 >Carro de compras</h2>
+            <table class="table " >
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            Producto
+                        </th>
+                        <th scope="col">
+                            Precio
+                        </th>
+                        <th scope="col">
+                            Cantidad
+                        
+                        </th >
+                        <th scope="col">
+                            Subtotal
+                        </th>
+                        <th>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of venta.detallesVentas">
+                        <td>
+                            <div>
+                                <h6><b> {{item.producto.name}}</b></h6>
+                            </div>
+                            <p>{{item.producto.description}}</p>
+                        </td>
+                        <td>
+                            {{item.producto.price}}
+                        </td>
+                        <td>
+                            {{item.cantidad}}
+                            <button id="button-option-sale" (click)="addCountProductVenta(item.producto.productID)" class="">+</button> 
+                            <button id="button-option-sale" (click)="removeCountProductVenta(item.producto.productID)" class="bi">-</button>
+                        </td>
+                        <td>{{item.subTotal}}</td>
+                        <td>
+                            <button id="button-option-sale" (click)="removeProductVenta(item)" class="bi bi-x-circle"></button> <br>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+            
+            <div class="container"  >
+                <div class="row " id="options-buttons">
+                    <div class="col col-lg-2">
+                        <button data-target="#modalRegisterProduct" data-toggle="modal" id="button-option-list-sale">Seguir comprando</button>
+
+                    </div>
+                    <div class="col-md-auto">
+                        <button  id="button-option-list-sale-update">Actualizar el carrito</button>
+
+                    </div>
+                    <div class="col">
+                        <button id="button-option-list-sale-delete">Borrar el carro de compra</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="modalRegisterProduct" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content" style="padding: 10px;">
+                        <form action="">
+                            <div class="form-group">
+                                <label class="text-input" id="IDBuscar" for="idProducto">Producto por ID</label>
+                                <input type="text" class="form-control input-register" id="idProducto" placeholder="Buscar Producto por ID">
+                            </div>
+                            <table id="table-detail">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            Producto
+                                        </th>
+                                        <th scope="col">
+                                            Descripcion
+                                        </th>
+                                        <th scope="col">
+                                            Cantidad
+                                        </th>
+
+                                        <th scope="col">
+                                            Precio
+                                        
+                                        </th >
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of products">
+                                        <td>
+                                            {{item.name}}
+                                        </td>
+                                        <td>
+                                            {{item.description}}
+                                        </td>
+                                        <td>
+                                            {{item.quantity}}
+                                        </td>
+                                        <td>
+                                            {{item.price}}
+                                        </td>
+                                        <td>
+                                            <button id="button-option-sale" (click)="addProductVenta(item)" class="bi bi-bookmark-check-fill"></button>
+                                        </td>
+                                    </tr>
+                                
+                            </table>
+                            <div style="margin-top: 10px ;" >
+                                <button type="button" id="btnCloseModalProduct" class="btn btn-primary" style="width:100%">Salir</button>
+                            </div>
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="background-color: rgb(245,248,251) ;" class="col-lg-3">
+            <h3>Resumen</h3>
+            <div class="col-lg-20">
+                <form action="">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>CI/NIT/NOMBRE</mat-label>
+                        <input #txtCi type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option.nombre}}
+                          </mat-option>
+                        </mat-autocomplete>
+                      </mat-form-field>
+                      <div>
+                        <label class="text-input" for="nitCi">Nit</label>
+                        <input type="text" class="form-control input-register" name="nombreClienteEscogido" [(ngModel)]="venta.cliente.nitCi" [readonly]="true">
+                       
+                            
+                        </div>
+                        
+                        
+                  
+                   
+                </form>
+            </div>
+            <div id="icon-add">
+                <button data-target="#modalRegister" data-toggle="modal" id="btn-addClient" class="bi bi-person-plus"></button>
+            </div>
+            <div id="modalRegister" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content"   style="padding: 10px;">
+                        <form  (ngSubmit)="RegisterClient()" validate>
+                            <div  [formGroup]="angForm">
+
+                            
+                            <div class="form-group">
+                                <label class="text-input" for="nombre">Nombre</label>
+                                <input type="text" formControlName="nombre" class="form-control input-register" name="nombre"  id="nombre" placeholder="Nombre" >
+                                <div *ngIf=" angForm.controls['nombre'].invalid && (angForm.controls['nombre'].dirty || angForm.controls['nombre'].touched)">
+                                    <div *ngIf="angForm.controls['nombre'].errors.required">El nombre es requerido.</div>
+                              </div>
+                            </div>
+                            <div >
+                                <label class="text-input" for="apellido">Apellido</label>
+                                <input formControlName="apellido" type="text" class="form-control input-register" name="apellidos"  id="apellidos" placeholder="Apellido" >
+                                <div *ngIf=" angForm.controls['apellido'].invalid && (angForm.controls['apellido'].dirty || angForm.controls['apellido'].touched)">
+                                    <div *ngIf="angForm.controls['apellido'].errors.required">El apellido es requerido</div>
+                                    
+                                </div>
+                            </div>
+                            <div>
+                                <label class="text-input" for="nitCi">Nit</label>
+                                <input formControlName="nit" type="text" class="form-control input-register" name="nitCi"  id="nitCi" placeholder="NIT" >
+                                <div *ngIf=" angForm.controls['nit'].invalid && (angForm.controls['nit'].dirty || angForm.controls['nit'].touched)">
+                                    <div *ngIf="angForm.controls['nit'].errors.required">El nit o Ci es necesario.</div>
+                              </div>
+                            </div>
+                            <div>
+                                <label class="text-input" for="correo">Correo electrónico</label>
+                                <input formControlName="correo" type="email" class="form-control input-register" name="correo" name="correo" placeholder="Correo electrónico">
+                                <div *ngIf=" angForm.controls['correo'].invalid && (angForm.controls['correo'].dirty || angForm.controls['correo'].touched)">
+                                    <div *ngIf="angForm.controls['correo'].errors.required">El correo es necesario</div>
+                                    <div *ngIf="angForm.controls['correo'].errors.email">EL correo es invalido</div>
+                                    
+                              </div>
+                            </div>
+
+                            <div style="margin-top: 10px ;" >
+                                <button type="submit" id="btnRegister"   class="btn btn-primary" style="width:100%">Registrar</button>
+                            </div>
+                        
+                            <div style="margin-top: 10px ;" >
+                                <button type="button" id="btnCloseModal" class="btn btn-danger" style="width:100%">Cancelar</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            
+        
+			
+            <br>
+            <div>
+                <div id="total-products">
+                    <div id="total">
+                        Total Productos
+                        
+                    </div>
+                    <div id="number">
+                        {{venta.detallesVentas.length}}
+                    </div>
+                </div>
+                
+                <button class="accordion">Ver mas detalle </button>
+                
+                <div class="panel" >
+                    
+                    <div >
+                        <table id="table-detail">
+                            <thead>
+                                
+                            </thead>
+                            <tbody>
+                                <tr >
+                    
+                                    <table style="background-color: rgb(207,229,237);"  id="table-detail" >
+                                        <thead>
+                                            <tr>
+                                                <th>Producto</th>
+                                                <th>Precio</th>
+                                                <th>Cant.</th>
+                                                <th>Subt.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of venta.detallesVentas">
+                                                <td>
+                                                    <div>
+                                                        <h4> {{item.producto.name}}</h4>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    {{item.producto.price}}
+                                                </td>
+                                                <td>{{item.cantidad}}</td>
+                                                <td>{{item.subTotal}}</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </tr>     
+                            </tbody>
+                            <tfoot style="margin: 50px;" >
+                                <tr>
+                                    <p><b>Total :</b> <strong> {{venta.total}}</strong></p>
+                                </tr>
+                            </tfoot>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div style="padding: 10px" >
+                <button type="button" (click)="sales()"  id="btn-sale" style="width:100%">Vender</button>
+            </div>
+            
+            
+        </div>
+       
+</div>

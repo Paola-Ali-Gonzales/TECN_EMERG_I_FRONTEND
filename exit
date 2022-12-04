@@ -1,0 +1,66 @@
+[33mcommit 09eb6fc77b0f593f5cd599be663796308c2f2e7a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: LitosCar19 <carlitos.sebu@gmail.com>
+Date:   Sat Nov 5 12:17:24 2022 -0400
+
+    Show products iterations (false data product)
+
+[33mcommit a8b0debe1207e4bee97076e98e94cc0cacc5db96[m[33m ([m[1;31morigin/Feature/ventas-modeloservicio[m[33m)[m
+Author: PedroAndresCondeValdez <pedroandrescondevaldez@gmail.com>
+Date:   Fri Nov 4 20:33:13 2022 -0400
+
+    Servicios y Modelos
+
+[33mcommit 089f21125d88251931d7ef49e40e29585162e38c[m[33m ([m[1;31morigin/Feature/ventas-detallesventa[m[33m)[m
+Author: PedroAndresCondeValdez <pedroandrescondevaldez@gmail.com>
+Date:   Wed Nov 2 23:47:04 2022 -0400
+
+    Models y servicio cliente.service vacio
+
+[33mcommit d2cb05c7caf6e57972a279e58fcd20d57c299cbc[m
+Merge: 55709dc c672a0e
+Author: Andy Paul Guzman Escalera <andyguzman117@gmail.com>
+Date:   Mon Oct 24 10:37:10 2022 -0400
+
+    mergue con Feature/ventas-caracteristicas
+
+[33mcommit 55709dc4f261159aadcce79a21ac40a59c73ed32[m
+Author: PedroConde20 <cvp2019844@est.univalle.edu>
+Date:   Mon Oct 24 09:54:10 2022 -0400
+
+    cambio final2
+
+[33mcommit b670fa97aab8f26a35c97b1282e7bb46d9172d5e[m
+Author: PedroConde20 <cvp2019844@est.univalle.edu>
+Date:   Mon Oct 24 09:27:49 2022 -0400
+
+    cambio final
+
+[33mcommit c672a0e49355cf534bb51e6736d9b25c1922fbc3[m
+Author: LitosCar19 <carlitos.sebu@gmail.com>
+Date:   Mon Oct 24 09:21:54 2022 -0400
+
+    Progress front-end
+
+[33mcommit b64362c34e4d5333e13aae5d2d452177fafdbb9c[m
+Author: PedroAndresCondeValdez <pedroandrescondevaldez@gmail.com>
+Date:   Fri Oct 21 22:10:45 2022 -0400
+
+    Recibos Falta colapsar con el boton , al parecer no funciona con angular
+
+[33mcommit 6bd46ea41cca5437dcf7af089138b37786391403[m
+Author: LitosCar19 <carlitos.sebu@gmail.com>
+Date:   Thu Oct 20 23:55:06 2022 -0400
+
+    Ventas Front-end avance
+
+[33mcommit fdc1911b78a228c039d607ccca38cf4c159911c8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: LitosCar19 <carlitos.sebu@gmail.com>
+Date:   Wed Oct 19 13:37:59 2022 -0400
+
+    Base Proyect
+
+[33mcommit 5fd8ded74fb43346991e50df329edbdcc23d830f[m
+Author: Andy Paul Guzman Escalera <andyguzman117@gmail.com>
+Date:   Sun Oct 16 16:42:03 2022 -0400
+
+    initial commit

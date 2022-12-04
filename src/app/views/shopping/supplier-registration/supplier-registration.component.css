@@ -1,0 +1,87 @@
+.cont-header h1{
+    font-weight: 600;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.line {
+    border-top: 1px solid #D9DBE9;
+    height: 2px;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.text-prov{
+    font-weight: bolder;
+    letter-spacing: 7px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+  
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+  
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+  
+.form-row > .col {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.row{
+    margin-top: 8px;
+}
+
+.input-wrapper {
+	position: relative;
+}
+
+.input-icon {
+	color: #A0A3BD;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+
+    left: unset;
+    right: 15px;
+}
+
+.text-input{
+    font-weight: bolder;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.btn-c{
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+    
+.btn-continue{
+    width: 300px;
+    color: #FFFFFF;
+    background: #0a457fc6;
+    box-shadow: 0px 3px 12px rgba(74, 58, 255, 0.18);
+    border-radius: 10px;
+    height: 45px;
+    margin: 10px;
+    align-items: center;
+}
+
+.btn-continue:hover{
+    background: #0A457F;
+}
