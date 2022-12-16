@@ -1,6 +1,6 @@
 {
     "/api/*": {
-      "target": "http://localhost:8090",
+      "target": "http://ec2-54-164-83-191.compute-1.amazonaws.com:8090",
       "secure": false,
       "logLevel" : "debug"
     }

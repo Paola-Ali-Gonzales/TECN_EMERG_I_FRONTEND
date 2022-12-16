@@ -5,7 +5,8 @@
 
 // AHORA
 
-export const BASE_ENDPOINT = 'http://ec2-50-19-136-71.compute-1.amazonaws.com:8090/api/almacenes';
+export const BASE_ENDPOINT = 'http://ec2-54-164-83-191.compute-1.amazonaws.com:8090/api/almacenes';
+
 
 
 
